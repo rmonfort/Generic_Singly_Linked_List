@@ -150,4 +150,39 @@ int main()
 	llint.search_linked_list(llint.return_head(), 8);
 	std::cout << "Searching for the value 21 in linked list... ";
 	llint.search_linked_list(llint.return_head(), 21);
+
+	std::cout << "\n" << std::endl;
+
+	std::cout << "A linked list has been created...\n" << std::endl;
+	LinkedList<char> llchar;
+
+	std::cout << "Checking if linked list is empty..." << std::endl;
+	if (llchar.empty())
+	{
+		std::cout << "Linked list has no values...\n" << std::endl;
+	}
+
+	std::cout << "Generating values for linked list..." << std::endl;
+	char values[] = { 'u', 'o', 'i', 'e', 'a' };
+	for (auto &c : values)
+	{
+		llchar.add_to_front(c);
+	}
+	std::cout << "Linked List:" << std::endl;
+	llchar.print_list();
+	std::cout << "\n";
+
+	std::cout << "The first element in the linked list is " << llchar.return_front() << "." << std::endl;
+	std::cout << "Removing the first element in linked list..." << std::endl;
+	llchar.remove_front();
+	std::cout << "Linked List:" << std::endl;
+	llchar.print_list();
+	std::cout << "\n";
+
+	std::cout << "Searching for the character e in linked list... ";
+	llchar.search_linked_list(llchar.return_head(), 'e');
+	std::cout << "Searching for the character i in linked list... ";
+	llchar.search_linked_list(llchar.return_head(), 'i');
+	std::cout << "Searching for the character b in linked list... ";
+	llchar.search_linked_list(llchar.return_head(), 'b');
 }
