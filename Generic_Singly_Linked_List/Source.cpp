@@ -20,7 +20,7 @@ public:
 	~LinkedList();
 	bool empty() const; // Checks if list is empty
 	const T& return_front() const; // Returns the front element in linked list
-	const Node<T>* LinkedList<T>::return_head() const; // Returns pointer to head of linked list
+	const Node<T>* return_head() const; // Returns pointer to head of linked list
 	void add_to_front(const T& n); // Add node to front of linked list
 	void remove_front(); // Remove node from front of list
 	void print_list(); // Prints all the values in linked list
